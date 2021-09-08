@@ -24,6 +24,14 @@ func ConfigRoutes(router *gin.Engine) *gin.Engine {
 			books.PUT("/", controllers.UpdateBook)
 			books.DELETE("/:id", controllers.DeleteBook)
 		}
+		orders := main.Group("orders")
+		{
+			orders.GET("/", controllers.ShowOrders)
+			orders.GET("/:id", controllers.ShowOrder)
+			orders.POST("/", controllers.CreateOrder)
+			orders.PUT("/", controllers.UpdateOrder)
+			orders.DELETE("/:id", controllers.DeleteOrder)
+		}
 	}
 
 	return router
