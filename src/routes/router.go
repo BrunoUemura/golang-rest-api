@@ -8,6 +8,14 @@ import (
 func ConfigRoutes(router *gin.Engine) *gin.Engine {
 	main := router.Group("api/v1")
 	{
+		users := main.Group("users")
+		{
+			users.GET("/", controllers.ShowUsers)
+			users.GET("/:id", controllers.ShowUser)
+			users.POST("/", controllers.CreateUser)
+			users.PUT("/", controllers.UpdateUser)
+			users.DELETE("/:id", controllers.DeleteUser)
+		}
 		books := main.Group("books")
 		{
 			books.GET("/", controllers.ShowBooks)
