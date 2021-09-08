@@ -3,8 +3,8 @@ package controllers
 import (
 	"strconv"
 
-	"github.com/BrunoUemura/golang-rest-api/database"
-	"github.com/BrunoUemura/golang-rest-api/models"
+	"github.com/BrunoUemura/golang-rest-api/src/database"
+	"github.com/BrunoUemura/golang-rest-api/src/models"
 	"github.com/gin-gonic/gin"
 )
 

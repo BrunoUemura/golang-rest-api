@@ -3,7 +3,7 @@ package server
 import (
 	"log"
 
-	"github.com/BrunoUemura/golang-rest-api/server/routes"
+	"github.com/BrunoUemura/golang-rest-api/src/routes"
 	"github.com/gin-gonic/gin"
 )
 

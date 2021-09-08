@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/BrunoUemura/golang-rest-api/database/migrations"
+	"github.com/BrunoUemura/golang-rest-api/src/database/migrations"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

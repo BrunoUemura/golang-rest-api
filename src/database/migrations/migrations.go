@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	"github.com/BrunoUemura/golang-rest-api/models"
+	"github.com/BrunoUemura/golang-rest-api/src/models"
 	"gorm.io/gorm"
 )
 
