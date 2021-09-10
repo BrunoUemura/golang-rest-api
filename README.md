@@ -13,5 +13,12 @@ golang-rest-api
 
 ### Start Application
 
+Using docker
+
+- docker-compose build
+- docker-compose up -d
+
+Locally (Need docker for database)
+
 - docker-compose up -d
 - go run main.go

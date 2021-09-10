@@ -12,3 +12,14 @@ services:
       - "25432:5432"
     volumes:
       - ./pgdata:/var/lib/postgresql/data
+
+  go-api:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    container_name: go-api
+    depends_on:
+      - postgres
+    restart: always
+    ports:
+      - "5000:5000"
