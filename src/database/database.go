@@ -2,6 +2,7 @@ package database
 
 import (
 	"log"
+	"os"
 	"time"
 
 	"github.com/BrunoUemura/golang-rest-api/src/database/migrations"
@@ -12,7 +13,7 @@ import (
 var db *gorm.DB
 
 func StartDB() {
-	str := "host=host.docker.internal port=25432 user=admin dbname=gorestapi sslmode=disable password=123456"
+	str := os.Getenv("DB_INFO")
 
 	database, err := gorm.Open(postgres.Open(str), &gorm.Config{})
 	if err != nil {
