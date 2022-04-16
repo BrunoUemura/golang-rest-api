@@ -16,7 +16,7 @@ type jwtService struct {
 func NewJWTService() *jwtService {
 	return &jwtService{
 		secretKey: os.Getenv("JWT_SECRET"),
-		issure:    "ms-chats",
+		issure:    "myself",
 	}
 }
 

@@ -5,6 +5,7 @@ import (
 
 	"github.com/BrunoUemura/golang-rest-api/src/database"
 	"github.com/BrunoUemura/golang-rest-api/src/models"
+	"github.com/BrunoUemura/golang-rest-api/src/services"
 	"github.com/gin-gonic/gin"
 )
 
@@ -61,6 +62,8 @@ func CreateUser(c *gin.Context) {
 		})
 		return
 	}
+
+	user.Password, _ = services.HashPassword(user.Password)
 
 	err = db.Create(&user).Error
 	if err != nil {
